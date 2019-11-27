@@ -10,4 +10,4 @@ Extras:
 - Randomly generate two lists to test this
 - Write this in one line of Python (don’t worry if you can’t figure this out at this point - we’ll get to it soon)
 
-Source: https://www.practicepython.org/exercise/2014/02/26/04-divisors.html
+Source: https://www.practicepython.org/exercise/2014/03/05/05-list-overlap.html
