@@ -5,5 +5,4 @@ Extras:
 - Keep the game going until the user types “exit”
 - Keep track of how many guesses the user has taken, and when the game ends, print this out.
 
-
 Source: https://www.practicepython.org/exercise/2014/04/02/09-guessing-game-one.html
