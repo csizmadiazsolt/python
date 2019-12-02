@@ -4,7 +4,7 @@ from random import randint
 def generate_password(length):
   password = ""
 
-  for i in range(0,length):
+  for _ in range(0,length):
     pass_char = randint(33,126)
     password += chr(pass_char)
 	
