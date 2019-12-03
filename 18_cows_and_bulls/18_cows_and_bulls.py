@@ -22,12 +22,20 @@ def number_of_bulls(number, guess, cows):
 
   return bull_counter - cows	
 
+def input_handler():
+  while True:
+    your_guess = str(input("Enter a 4 digit number: "))
+    if your_guess.isnumeric() and len(your_guess) == 4:
+      break
+
+  return your_guess
+
 def game_loop():
   number_of_attempts = 0
   random_number = str(random_four_digit_number())
   
   while True:
-    your_guess = str(input("Enter a number: "))
+    your_guess = input_handler()
     number_of_attempts += 1
     cows = number_of_cows(random_number, your_guess)
     bulls = number_of_bulls(random_number, your_guess, cows)
