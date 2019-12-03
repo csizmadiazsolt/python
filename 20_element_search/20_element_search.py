@@ -8,7 +8,7 @@ def is_in_list_impl1(ordered_list, number):
   else:
     return False
 
-def binary_search(A_list,T_target):
+def binary_search(A_list, T_target):
   L = 0
   R = len(A_list)-1
 
