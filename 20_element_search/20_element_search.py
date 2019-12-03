@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import math
-import timeit
 
 def is_in_list_impl1(ordered_list, number):
   if number in ordered_list:
