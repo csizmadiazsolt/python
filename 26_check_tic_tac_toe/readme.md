@@ -21,24 +21,24 @@ Here are some more examples to work with:
 
 ```
 winner_is_2 = [[2, 2, 0],
-	[2, 1, 0],
-	[2, 1, 1]]
+               [2, 1, 0],
+               [2, 1, 1]]
 
 winner_is_1 = [[1, 2, 0],
-	[2, 1, 0],
-	[2, 1, 1]]
+               [2, 1, 0],
+               [2, 1, 1]]
 
 winner_is_also_1 = [[0, 1, 0],
-	[2, 1, 0],
-	[2, 1, 1]]
+                    [2, 1, 0],
+                    [2, 1, 1]]
 
 no_winner = [[1, 2, 0],
-	[2, 1, 0],
-	[2, 1, 2]]
+             [2, 1, 0],
+             [2, 1, 2]]
 
 also_no_winner = [[1, 2, 0],
-	[2, 1, 0],
-	[2, 1, 0]]
+                  [2, 1, 0],
+                  [2, 1, 0]]
 ```
 
 Source: https://www.practicepython.org/exercise/2015/11/16/26-check-tic-tac-toe.html
