@@ -17,7 +17,7 @@ ERROR_MSG_ONLY_XY = "ERROR: Only X and Y coordinates are needed!"
 ERROR_MSG_NUMERIC = "ERROR: Inputs should be numeric!"
 ERROR_MSG_X_BETWEEN = "ERROR: X should be between 1 and "
 ERROR_MSG_Y_BETWEEN = "ERROR: Y should be between 1 and "
-ERROR_MSG_COLLISION = "Collision!!!"
+ERROR_MSG_COLLISION = "ERROR: Engaged field!"
 
 WIN_MSG_NO_WINNER = "\nThere is no winner..."
 WIN_MSG_PLAYER1 = "\nThe winner is PLAYER1: "
