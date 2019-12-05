@@ -3,31 +3,39 @@
 MAX_X = 3
 MAX_Y = 3
 
+ERROR_MSG_NO_COMMA = "ERROR: There is no , in the input!"
+ERROR_MSG_ONLY_XY = "ERROR: Only X and Y coordinates are needed!"
+ERROR_MSG_NUMERIC = "ERROR: Inputs should be numeric!"
+ERROR_MSG_X_BETWEEN = "ERROR: X should be between 1 and "
+ERROR_MSG_Y_BETWEEN = "ERROR: Y should be between 1 and "
+
+INPUT_MSG = "Please enter X and Y coordinates - [x,y]: "
+
 def input_checker(input_string, range_x, range_y):
   error_flag = True
   is_numeric_flag = True
 
   if "," not in input_string:
-    print("ERROR: There is no , in the input!")
+    print(ERROR_MSG_NO_COMMA)
     error_flag = False
 
   splitted_input = input_string.split(",")
   
   if len(splitted_input) > 2:
-    print("ERROR: Only X and Y coordinates are needed!")
+    print(ERROR_MSG_ONLY_XY)
     error_flag = False
 
   if (splitted_input[0].isnumeric() == False) or (splitted_input[1].isnumeric() == False):
-    print("ERROR: Inputs should be numeric!")
+    print(ERROR_MSG_NUMERIC)
     is_numeric_flag = False
     error_flag = False
 	
   if is_numeric_flag == False or range_x < int(splitted_input[0]) or int(splitted_input[0]) < 1:
-    print("ERROR: X should be between 1 and " + str(range_x))
+    print(ERROR_MSG_X_BETWEEN + str(range_x))
     error_flag = False
 
   if is_numeric_flag == False or range_y < int(splitted_input[1]) or int(splitted_input[1]) < 1:
-    print("ERROR: Y should be between 1 and " + str(range_y))
+    print(ERROR_MSG_Y_BETWEEN + str(range_y))
     error_flag = False
 
   if error_flag == False:
@@ -36,7 +44,7 @@ def input_checker(input_string, range_x, range_y):
     return splitted_input
 
 def input_handler():
-  value = str(input("Please enter X and Y coordinates - [x,y]: "))
+  value = str(input(INPUT_MSG))
   
   result = input_checker(value, MAX_X, MAX_Y)
   
