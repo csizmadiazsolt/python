@@ -2,6 +2,7 @@
 from random import randint
 
 NUM_OF_LINES = 267751
+MAX_GUESSES = 6
 
 def get_word_from_line_in_file(file_name, line_number):
   counter = 0
@@ -32,12 +33,15 @@ def add_to_already_guessed(already_guessed, new_guess):
   return already_guessed_list
 
 def correct_dash_mixture(guess_word, already_guessed):
-  mixture = ""
+  mixture = "\n"
+
   for l in guess_word:
     if l in already_guessed:
       mixture += l + " "
     else:
       mixture += "_ "
+  
+  mixture += "\n"
 
   return mixture
 
@@ -52,13 +56,30 @@ def guess_result_handler(guess_result, already_guessed, guess, word, guess_count
   if guess_result == 1:
     add_to_already_guessed(already_guessed, guess)
     print(correct_dash_mixture(word, already_guessed))
+    print("Correct! ", end="")
   elif guess_result == 0:
-    print("Incorrect!")
+    print("Incorrect! ", end="")
     counter += 1
   elif guess_result == -1:
-    print("Already guessed!")
+    print("Already guessed! ", end="")
 
   return counter
+
+def remaining_guess(guess_counter):
+  remaining = MAX_GUESSES - guess_counter
+
+  print("You have " + str(remaining) + " incorrect guesses left.\n")
+
+def win_or_lose_check(guess_counter, already_guessed, guess_word):
+  if guess_counter > MAX_GUESSES-1:
+    print("Lose!")
+    return -1
+
+  if len(already_guessed) == len(guess_word):
+    print("Win!")
+    return 1
+    
+  return 0
 
 def game_loop():
   guess_counter = 0
@@ -74,5 +95,11 @@ def game_loop():
     guess = guess_input_handler()
     guess_result = is_the_guess_correct(random_word, already_guessed, guess)
     guess_counter = guess_result_handler(guess_result, already_guessed, guess, random_word, guess_counter)
+    remaining_guess(guess_counter)
+    
+    result = win_or_lose_check(guess_counter, already_guessed, random_word)
+    
+    if (result == -1) or (result == 1):
+      break
 
 game_loop()
