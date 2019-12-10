@@ -1,5 +1,5 @@
 # Fibonacci's Exception Handling
-Remember that you have already implemented Fibonnaci numbers generator in exercise 13. Update the program by exception handling (ValueError) to inform users about incorrect, not numberic inputs. The output should be the following in case of correct and incorrect inputs:
+Remember that you have already implemented Fibonnaci numbers generator in exercise 13. Update the program by exception handling (ValueError) to inform users about incorrect, not numeric inputs. The output should be the following in case of correct and incorrect inputs:
 
 Normal case:
 ```
