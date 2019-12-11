@@ -32,4 +32,3 @@ blackbird = Bird("Blacky")
 dog.getInfo()
 whale.getInfo()
 blackbird.getInfo()
-
