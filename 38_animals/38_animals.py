@@ -12,7 +12,7 @@ class Animal:
 
 class Mammal(Animal):
   def __init__(self, name, numberOfLegs = 4):
-    Animal.__init__(self, name)
+    super().__init__(name)
     self.numberOfLegs = numberOfLegs
 
   def getInfo(self):
@@ -20,7 +20,7 @@ class Mammal(Animal):
 
 class Bird(Animal):
   def __init__(self, name, numberOfLegs = 2, numberOfWings = 2):
-    Animal.__init__(self, name)
+    super().__init__(name)
     self.numberOfLegs = numberOfLegs
     self.numberOfWings = numberOfWings
 
